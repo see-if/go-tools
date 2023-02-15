@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func IsIP(ip string) bool {
+func IsIpv4IP(ip string) bool {
 	ipArray := strings.Split(ip, ".")
 	if len(ipArray) != 4 {
 		return false
