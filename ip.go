@@ -13,9 +13,12 @@ func IsIP(ip string) bool {
 		return false
 	}
 	for _, item := range ipArray {
-		_, err := strconv.Atoi(item)
+		num, err := strconv.Atoi(item)
 		if err != nil {
 			fmt.Printf("err is :%v \n", err.Error())
+			return false
+		}
+		if num < 0 || num > 255 {
 			return false
 		}
 	}
